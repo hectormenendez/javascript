@@ -1,0 +1,19 @@
+******************
+jQuery.girup usage
+******************
+
+$('element').girup({
+    url      : document.URL+'/image_upload',
+    success  : function(){ },
+    error    : function(){ },
+    change   : function(){ },
+    cancel   : function(){ },
+    mouseover: function(){ },
+    mouseout : function(){ },
+    callback : function(raw){
+        // simulate response status detection by detecting JSON
+        try      { if (!(data = $.parseJSON(raw))) throw new Error(); } 
+        catch(e) { return this.error(raw, e); }  
+        return this.success(data);
+    }
+});
