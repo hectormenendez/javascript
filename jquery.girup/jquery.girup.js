@@ -24,7 +24,7 @@
 (function($){ jQuery.fn.girup = function(settings){ return this.each(function(i, elem){
 
 	// set this to true when implemeting, you'll thank me. [2011/AGO/06]
-	var log = false;
+	var log = true;
 
 	if (typeof settings !== 'object') settings = {};
 	// verify required settings

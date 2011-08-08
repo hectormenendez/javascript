@@ -1,0 +1,49 @@
+<!doctype html>
+<!--[if lt IE 7 ]>              <html class="no-js ie6" lang="es-mx"><![endif]-->
+<!--[if IE 7 ]>                 <html class="no-js ie7" lang="es-mx"><![endif]-->
+<!--[if IE 8 ]>                 <html class="no-js ie8" lang="es-mx"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js"     lang="es-mx"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>jQuery.girup.example</title>
+	<style>
+		fieldset { position:relative; }
+		.bg { 
+			display:block;
+			position:relative;
+			display:inline-block;
+			overflow:hidden;
+			background-color:#333;
+			border-radius:.25em;
+		}
+
+		.bg span {
+			cursor:pointer;
+			text-align:center;
+			color:white;
+			font-weight:bold;
+			line-height:2em;
+			padding:0 .75em;
+		}
+	</style>	
+	<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+	<script type="text/javascript" src="jquery.girup.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('.bg span').girup({
+				url:'/test',
+				callback:function(data){
+					alert(data)
+				}
+			});
+			
+		})
+	</script>
+</head>
+<body>
+
+	<div class="bg"><span>subir</span></div>
+
+</body>
+</html>
